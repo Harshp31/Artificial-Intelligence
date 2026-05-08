@@ -47,3 +47,19 @@
 #     print("Username must not contain digits")
 # else:
 #     print(f"Welcome {username}")
+
+
+
+#Sum of Natural numbers
+
+# class Solution:
+#     def findsum(self, n):
+#         self.n = n
+#         if n == 0:
+#             return 0
+#         else:
+#            return int(n*(n+1)/2)
+        
+# sum = Solution()
+# print(sum.findsum(5))
+
