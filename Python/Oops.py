@@ -293,3 +293,43 @@
 # make_it_speak(Parrot())
 
 
+#----------------------A B S T R A C T I O N -----------------------
+# Abstraction:- hides how it works using abstract classes
+
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):   #abstract class
+
+    @abstractmethod
+    def start(self):
+        pass
+
+    @abstractmethod
+    def fuel_type(self):
+        pass
+
+    def describe(self):     #Normal Method
+        print("I'm a vehicle")
+
+class Car(Vehicle):    #must implement both
+    def start(self):
+        print("Car! Turning Ignition key")
+
+    def fuel_type(self):
+        print("Car Runs on petrol")
+
+
+class Motorbike(Vehicle):
+    def start(self):
+        print("Press, Power Button")
+
+    def fuel_type(self):
+        print("Bike Runs on petrol")
+
+car = Car()
+bike = Motorbike()
+car.start()
+bike.start()
+bike.fuel_type()    
+
+
