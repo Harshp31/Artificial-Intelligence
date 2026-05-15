@@ -2,7 +2,7 @@
 # import math as m  # Importing math module as m
 # from math import pi  # Importing only the pi constant from math module  
 from math import e   # Importing only the e constant from math module
-import example  # Importing the example module
+import Python.Basics.example as example  # Importing the example module
 
 # print(math.pi)  # Output: 3.141592653589793
 # print(m.pi)  # Output: 3.141592653589793
