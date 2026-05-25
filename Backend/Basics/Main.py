@@ -13,3 +13,7 @@ def get_user(user_id: int):
 @app.get('/about')
 def hello():
     return {"message": "Harsh panwar"}
+
+@app.route("/signup")
+def signup():
+    return {"message": "User Created Sucessfully"}
