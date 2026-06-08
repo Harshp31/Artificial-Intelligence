@@ -2,6 +2,7 @@
 
 import asyncio
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 async def make_tea():
     print('Boiling water...')
@@ -87,3 +88,14 @@ async def main():
     print(result2)
 
 asyncio.run(main())
+
+
+
+class Product(BaseModel):
+    name: str
+    price: float
+    
+
+@app.post('/create-product')
+async def create_product(product: Product):
+    return {"message": f"Product '{product.name}' was created with price {product.price}"}
