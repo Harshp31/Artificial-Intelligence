@@ -1,6 +1,7 @@
 #Asynchronous execution means a program can start a slow task, pause it while it waits, and continue doing other work instead of sitting idle.
 
 import asyncio
+from pickle import APPEND
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -96,6 +97,6 @@ class Product(BaseModel):
     price: float
     
 
-@app.post('/create-product')
+@APPEND.post('/create-product')
 async def create_product(product: Product):
     return {"message": f"Product '{product.name}' was created with price {product.price}"}
